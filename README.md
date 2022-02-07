@@ -1,29 +1,56 @@
-# ZHFMBlog
+# ZFBlog
+珠海市美食博客管理系统
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
-
+#### 技术介绍
+客户端Vue3，服务端Nest，数据库MongoDB，组件库Antd
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  yarn add
+2.  cd web/admin
+3.  yarn serve
+4.  前台接口文档http://localhost:5000/api-docs
+    ![输入图片说明](images/11.png)
+
+5.  后台接口文档http://localhost:4000/api-docs
+    ![输入图片说明](images/12.png)
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  管理员用户名：admin，管理员密码：123456
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  总耗时一个月全栈开发
+
+#### 相关截图
+
+前台短视频介绍城市
+![输入图片说明](images/1.png)
+
+前台管理员文章
+![输入图片说明](images/2.png)
+
+前台用户文章
+![输入图片说明](images/3.png)
+
+前台留言板
+![输入图片说明](images/4.png)
+
+前台收藏文章
+![输入图片说明](images/5.png)
+
+前台文章详情
+![输入图片说明](images/6.png)
+
+管理员后台管理中心
+![输入图片说明](images/7.png)
+
+普通用户文章创作中心
+![输入图片说明](images/8.png)
+
+后台文章列表
+![输入图片说明](images/9.png)
+
+后台文章编辑
+![输入图片说明](images/10.png)

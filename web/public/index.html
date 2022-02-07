@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+        "model": {
+            jsonPath: "https://unpkg.com/live2d-widget-model-hijiki/assets/hijiki.model.json",
+            "scale": 1
+        },
+        "display": {
+            "position": "left",
+            "width": 150,
+            "height": 150,
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.8,
+            "opacityOnHover": 0.2
+        }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript">
+    var index = 0;                            //全局索引
+    var colorIndex = 0;
+    $(document).ready(function() {
+        $("body").click(function(e) {         //鼠标点击事件
+            var arr = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+            var colorArr = new Array("red", "orange", "yellow", "green", "blue", "indigo", "purple");
+            var tmp = $("<span/>").text(arr[index]);    //添加一个span标签显示arr数组对应的第一个索引内容
+            index = (index + 1) % arr.length;           //取余,从0到arr数组长度，一直点击一直循环
+            var color = colorArr[colorIndex];
+            colorIndex = (colorIndex + 1) % colorArr.length;
+            var x = e.pageX, y = e.pageY;   //鼠标点击的x,y点坐标
+            tmp.css({
+                "z-index" : 999,            //堆叠顺序，越大越优先显示
+                "top" : y - 20,             //y点坐标往上20像素
+                "left" : x,                 //x点坐标
+                "position" : "absolute",    //绝对定位
+                "font-weight" : "bold",     //加粗
+                "color" : color,            //颜色
+                "font-size" : 20            //字体大小
+            });
+            $("body").append(tmp);
+            tmp.animate({                   //自定义动画,样式--时间--功能
+                "top" : y - 200,            //y点坐标往上200像素
+                "opacity" : 0               //饱和度,0即是透明了
+            }, 2000, function() {           //2000毫秒
+                tmp.remove();               //消失
+            });
+        });
+    });
+    </script>
+</html>
