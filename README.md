@@ -18,6 +18,7 @@
 #### 使用说明
 
 1.  管理员用户名：admin，管理员密码：123456
+2.  服务端地址：https://gitee.com/JudgeFF/zhfmblog-server
 
 #### 参与贡献
 
